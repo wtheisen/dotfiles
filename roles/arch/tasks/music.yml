@@ -1,0 +1,15 @@
+- name: install music-related packages
+  yaourt:
+    name: "{{item}}"
+    state: present
+  with_items:
+    
+    - cli-visualizer # sweet visualzer in the terminal
+
+    - ncmpcpp # cli music "gui"
+    - mopidy
+    - mopidy-spotify # spotify plugin for mopidy
+    - mopidy-mpris   # plugin that allows controlling mopidy from playerctl
+
+    - playerctl      # cli tool for next/prev, play/pause, etc
+    - spotify-beta
